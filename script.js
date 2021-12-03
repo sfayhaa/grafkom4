@@ -172,6 +172,8 @@ loader.load('./model/scene.gltf', function(gltf) {
 
 })
 
+/*
+
 const treeLoader = new GLTFLoader()
 treeLoader.load('./model-tree/scene.gltf', function(gltf) {
     const root = gltf.scene;
