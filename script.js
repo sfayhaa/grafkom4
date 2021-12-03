@@ -173,7 +173,6 @@ loader.load('./model/scene.gltf', function(gltf) {
 })
 
 /*
-
 const treeLoader = new GLTFLoader()
 treeLoader.load('./model-tree/scene.gltf', function(gltf) {
     const root = gltf.scene;
@@ -211,6 +210,7 @@ treeLoader2.load('./model-tree/scene.gltf', function(gltf) {
     });
 
 })
+*/
 
 /**
  * Lights
@@ -287,18 +287,13 @@ scene.add(mirrorBall);
 const dragGeo = new THREE.BoxGeometry()
 const dragMaterial = [
     new THREE.MeshPhongMaterial({ color: 0xff0000, transparent: true }),
-    new THREE.MeshPhongMaterial({ color: 0x00ff00, transparent: true }),
-    new THREE.MeshPhongMaterial({ color: 0x0000ff, transparent: true })
 ]
 
 const cubes = [
     new THREE.Mesh(dragGeo, dragMaterial[0]),
-    new THREE.Mesh(dragGeo, dragMaterial[1]),
-    new THREE.Mesh(dragGeo, dragMaterial[2])
 ]
 cubes[0].position.set(0, -4.5, 10)
-cubes[1].position.set(3, -4.5, 10)
-cubes[2].position.set(5, -4.5, 10)
+
 cubes.forEach((c) => scene.add(c))
 
 const dragControls = new DragControls(cubes, camera, canvas)
