@@ -178,7 +178,9 @@ loader2.load('./model/scene.gltf', function(gltf) {
     root.position.x = 5;
     root.position.y = -5;
     root.position.z = 10;
+    root..scale.set(8,8,8);
     scene.add(root);
+    
 
     root.traverse(n => {
         if (n.isMesh) {
