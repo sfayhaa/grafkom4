@@ -172,14 +172,11 @@ loader.load('./model/scene.gltf', function(gltf) {
 
 })
 
-/*
-const treeLoader = new GLTFLoader()
-treeLoader.load('./model-tree/scene.gltf', function(gltf) {
+const loader2 = new GLTFLoader()
+loader2.load('./model/scene.gltf', function(gltf) {
     const root = gltf.scene;
-    root.position.x = 10;
-    root.position.y = -5;
-    root.position.z = 8;
-    gltf.scene.scale.set(0.01, 0.01, 0.01);
+    root.position.x = 0;
+    root.position.y = 15;
     scene.add(root);
     // console.log(dumpObject(root).join('\n'));
 
@@ -192,25 +189,6 @@ treeLoader.load('./model-tree/scene.gltf', function(gltf) {
 
 })
 
-const treeLoader2 = new GLTFLoader()
-treeLoader2.load('./model-tree/scene.gltf', function(gltf) {
-    const root = gltf.scene;
-    root.position.x = 13;
-    root.position.y = -5;
-    root.position.z = 7;
-    gltf.scene.scale.set(0.007, 0.007, 0.007);
-    scene.add(root);
-    // console.log(dumpObject(root).join('\n'));
-
-    root.traverse(n => {
-        if (n.isMesh) {
-            n.castShadow = true;
-            n.receiveShadow = true;
-        }
-    });
-
-})
-*/
 
 /**
  * Lights
@@ -253,7 +231,7 @@ directionalLightFolder.add(directionalLight, 'intensity').min(0).max(10).step(0.
  */
 
 const near = 20;
-const far = 120;
+const far = 70;
 const color = 'lightgreen';
 scene.fog = new THREE.Fog(color, near, far);
 
@@ -284,9 +262,9 @@ scene.add(mirrorBall);
  */
 
 
-const dragGeo = new THREE.BoxGeometry()
+const dragGeo = new THREE.ConeGeometry()
 const dragMaterial = [
-    new THREE.MeshPhongMaterial({ color: 'brown', transparent: true }),
+    new THREE.MeshPhongMaterial({ color: 'black', transparent: true }),
 ]
 
 const cubes = [
