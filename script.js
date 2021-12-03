@@ -179,7 +179,6 @@ loader2.load('./model/scene.gltf', function(gltf) {
     root.position.y = -5;
     root.position.z = 10;
     scene.add(root);
-    // console.log(dumpObject(root).join('\n'));
 
     root.traverse(n => {
         if (n.isMesh) {
@@ -197,7 +196,6 @@ loader3.load('./model/scene.gltf', function(gltf) {
     root.position.y = -5;
     root.position.z = 10;
     scene.add(root);
-    // console.log(dumpObject(root).join('\n'));
 
     root.traverse(n => {
         if (n.isMesh) {
