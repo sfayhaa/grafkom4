@@ -286,7 +286,7 @@ scene.add(mirrorBall);
 
 const dragGeo = new THREE.BoxGeometry()
 const dragMaterial = [
-    new THREE.MeshPhongMaterial({ color: 0xff0000, transparent: true }),
+    new THREE.MeshPhongMaterial({ color: 'brown', transparent: true }),
 ]
 
 const cubes = [
