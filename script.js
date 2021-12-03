@@ -175,8 +175,8 @@ loader.load('./model/scene.gltf', function(gltf) {
 const loader2 = new GLTFLoader()
 loader2.load('./model/scene.gltf', function(gltf) {
     const root = gltf.scene;
-    root.position.x = 0;
-    root.position.y = 15;
+    root.position.x = 10;
+    root.position.y = -5;
     scene.add(root);
     // console.log(dumpObject(root).join('\n'));
 
