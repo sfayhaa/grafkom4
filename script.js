@@ -253,8 +253,8 @@ directionalLightFolder.add(directionalLight, 'intensity').min(0).max(10).step(0.
  */
 
 const near = 20;
-const far = 70;
-const color = 'lightblue';
+const far = 120;
+const color = 'lightgreen';
 scene.fog = new THREE.Fog(color, near, far);
 
 // fog helper
