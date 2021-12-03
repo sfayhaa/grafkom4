@@ -176,7 +176,25 @@ const loader2 = new GLTFLoader()
 loader2.load('./model/scene.gltf', function(gltf) {
     const root = gltf.scene;
     root.position.x = 5;
-    root.position.y = -4.5;
+    root.position.y = -5;
+    root.position.z = 10;
+    scene.add(root);
+    // console.log(dumpObject(root).join('\n'));
+
+    root.traverse(n => {
+        if (n.isMesh) {
+            n.castShadow = true;
+            n.receiveShadow = true;
+        }
+    });
+
+})
+
+const loader3 = new GLTFLoader()
+loader3.load('./model/scene.gltf', function(gltf) {
+    const root = gltf.scene;
+    root.position.x = -5;
+    root.position.y = -5;
     root.position.z = 10;
     scene.add(root);
     // console.log(dumpObject(root).join('\n'));
